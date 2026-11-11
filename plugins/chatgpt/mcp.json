@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "academy-manager": {
+      "type": "streamable-http",
+      "url": "https://mcp.academy-manager.app/mcp",
+      "extensions": {
+        "com.openai": {
+          "auth": {
+            "type": "oauth",
+            "client": {
+              "mode": "provided",
+              "clientId": "academy-manager-chatgpt-public-v1",
+              "tokenEndpointAuthMethod": "none"
+            },
+            "resource": "https://mcp.academy-manager.app/mcp",
+            "baseScopes": ["academies:read"]
+          }
+        }
+      }
+    }
+  }
+}

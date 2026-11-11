@@ -1,0 +1,11 @@
+{
+  "name": "academy-manager",
+  "displayName": "Academy Manager",
+  "version": "1.0.0",
+  "description": "Read academy records available to your connected Academy Manager account. Sign in with your own account and choose the academies and read permissions to share. This plugin cannot edit records, collect payments, send messages, or retrieve raw counseling content.",
+  "author": { "name": "Academy Manager", "url": "https://academy-manager.app" },
+  "homepage": "https://academy-manager.app",
+  "repository": "https://github.com/dongheelee92/academy-manager-plugins",
+  "license": "LicenseRef-Academy-Manager-Proprietary",
+  "keywords": ["academy", "attendance", "education"]
+}
