@@ -1,26 +1,47 @@
-# Academy Manager MCP plugins
+# Academy Manager MCP
 
-Release candidate for connecting ChatGPT and Claude to the Academy Manager MCP service. Each academy signs in with its own account and selects the academies and read permissions to authorize.
+ChatGPT와 Claude에서 Academy Manager의 학원 정보를 조회하는 공통 MCP 연결입니다.
+학원마다 기존 계정으로 로그인하고, 공유할 학원과 조회 권한을 직접 선택합니다.
 
-## Release status
+## 공개 상태
 
-The packages are prepared for public directory review. The standalone production MCP gateway, publisher verification, policy approval, reviewer access and directory reviews are still in progress. This repository is currently a private publication staging area.
+현재 공개 디렉터리 심사 준비 중입니다. 이 저장소는 비공개 배포 준비 공간이며,
+공개 디렉터리 등록·게시자 확인·개인정보 안내 검토·심사 계정 준비는 완료되지 않았습니다.
+아래 주소는 배포 대상이며, 이 문서만으로 운영 활성화나 심사 승인을 확인할 수는 없습니다.
 
-## Packages
+- 서비스: https://academy-manager.app
+- 공통 MCP: https://mcp.academy-manager.app/mcp
+- 연결 관리: https://mcp.academy-manager.app/settings/ai-connections
 
-- `plugins/chatgpt`: ChatGPT plugin manifest, remote MCP configuration and shared connection guidance.
-- `plugins/claude`: Claude web plugin manifest, remote connector reference and the same guidance.
+## 연결 방법
 
-The target MCP endpoint is `https://mcp.academy-manager.app/mcp`. The Academy Manager website is `https://academy-manager.app`. Current capabilities cover read-only student, attendance, class, stored lesson, makeup, billing, invoice and stored counseling-summary queries. An approved owner or administrator membership is required.
+공개 등록이 완료되면 다음 순서로 연결합니다.
 
-## Connect
+1. ChatGPT 또는 Claude의 공식 디렉터리에서 Academy Manager를 선택합니다.
+2. 연결 화면에서 기존 Academy Manager 계정으로 로그인합니다.
+3. 공유할 학원과 조회 권한을 선택하고 동의합니다.
+4. 대화에서 조회할 학원을 지정하고 질문합니다.
 
-After publication, install Academy Manager from the relevant official directory. Complete the normal account login, select your academies and permissions, and confirm the connection. Passwords, API keys and tokens belong in the service connection flow; do not paste them into chat or issues.
+승인된 소유자 또는 관리자 권한이 있는 활성 학원만 연결할 수 있습니다.
+선택한 권한을 줄이면 해당 조회 도구만 사용할 수 있습니다. 권한을 추가하려면
+연결을 다시 진행해 명시적으로 승인합니다. 패키지 업데이트로 기존 동의 범위가 늘어나지는 않습니다.
 
-## Support
+## 조회할 수 있는 정보
 
-Use repository issues for package installation and technical questions. Keep student and guardian information, counseling content, billing records and credentials out of public reports.
+학생, 출결, 반·시간표, 저장된 수업 기록, 보강, 수납·청구, 저장된 상담 요약을 조회합니다.
+예를 들어 “선택한 학원의 이번 주 보강 일정을 보여줘”, “이번 달 미납 청구서를 확인해줘”처럼
+질문할 수 있습니다. 학생·수업 기록 수정, 결제 실행, 문자 발송은 지원하지 않습니다.
 
-## License
+연결 관리 화면에서 자기 연결을 해제할 수 있습니다. 연결 해제는 이미 AI 서비스에
+전달된 결과나 대화 기록을 삭제하지 않습니다. 외부 서비스의 기록은 해당 서비스에서 관리합니다.
 
-Each package includes a draft proprietary integration license for owner review. It permits unmodified distribution through the official repository and OpenAI/Anthropic directories, and authorized installation/use.
+## 패키지와 지원
+
+- `plugins/chatgpt`: ChatGPT 매니페스트·MCP 설정·연결 안내
+- `plugins/claude`: Claude 웹 매니페스트·같은 MCP 주소·공통 연결 안내
+
+비밀번호·API 키·토큰은 정상 로그인·연결 화면에서만 사용하고 대화나 Issues에 붙여 넣지 마세요.
+기술 문의에도 학생·보호자 정보, 상담 내용, 학원별 수납 자료를 올리지 마세요.
+
+각 패키지의 라이선스는 운영자 검토용 초안입니다. 공식 저장소와 OpenAI·Anthropic
+디렉터리를 통한 원본 배포, 승인된 설치·사용 범위를 설명합니다.
