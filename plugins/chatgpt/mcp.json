@@ -14,7 +14,8 @@
               "tokenEndpointAuthMethod": "none"
             },
             "resource": "https://mcp.academy-manager.app/mcp",
-            "baseScopes": ["academies:read"]
+            "baseScopes": ["academies:read"],
+            "defaultScopes": ["academies:read", "students:read", "attendance:read", "classes:read", "billing:read", "counseling:read"]
           }
         }
       }

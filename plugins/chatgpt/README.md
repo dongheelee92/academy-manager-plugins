@@ -4,6 +4,8 @@ Read academy records available to your own Academy Manager account from ChatGPT.
 
 The integration reads students, attendance, classes, stored lessons, makeup lessons, billing summaries, invoices, and saved counseling summaries. It cannot edit records, collect payments, send messages, or recover raw counseling content. Each customer's existing account permissions still apply. Incomplete data and missing saved summaries are reported rather than invented.
 
+The initial connection requests the six read permissions used by these features. You can leave optional permissions unselected on the consent screen; only the tools you authorize will be available. To add permissions later, reconnect and explicitly approve them. A package update does not expand an existing connection's permissions.
+
 ![Academy Manager](./assets/icon.svg)
 
 - Website: https://academy-manager.app
