@@ -11,7 +11,7 @@ ChatGPT와 Claude에서 Academy Manager의 학원 정보를 조회하는 공통 
 
 - 서비스: https://academy-manager.app
 - 공통 MCP: https://mcp.academy-manager.app/mcp
-- 연결 관리: https://mcp.academy-manager.app/settings/ai-connections
+- 연결 관리: https://mcp.academy-manager.app/connections
 
 ## 연결 방법
 
